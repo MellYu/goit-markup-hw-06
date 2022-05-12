@@ -1,0 +1,781 @@
+
+    /* основной цвет текста ССЫЛКИ NAV, H2, H3 color: #212121;  */
+
+    /* вторичный цвет текста color: #757575; */
+    
+
+    /* background */
+
+    /* ОСНОВНОЙ (хедер) background: #FFFFFF; */
+
+    /* герой background: #2F303A; */
+
+    
+    /* наша команда background: #F5F4FA; */
+    
+    /* футер background: #2F303A;  */
+
+
+    /* цвет заголовка, адреса и лого в футере color: #FFFFFF; */
+
+    /* цвет почты и телефона в футере в адресе color: rgba(255, 255, 255, 0.6); */
+
+    /* ОСНОВНОЙ ЦВЕТ цвет ховера, кнопки заказать color: #2196F3 */
+
+    /* цвет части лого в хедере color: #000000;
+     часть лого color: #2196F3;*/
+
+    :root {
+        --accient-color: #2196F3;
+        --white-color:  #FFFFFF;
+        --black-color: #000000;
+        --primery-text-color: #757575;
+        --secondary-text-color:  #212121;
+        --background-header-footer: #2F303A;
+        --team-color: #F5F4FA;
+        --border-color: #eeeeee;
+
+    }
+
+
+       /* сброс стандартных стилей */
+    a {
+        text-decoration:none;
+        /* color: currentColor; */
+    }
+    button, btn {
+        cursor: pointer;
+    }
+        /* Убираем маркеры */
+    li {
+        list-style-type: none;
+    }
+
+    ul,
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 0;
+    }
+
+
+
+
+    body {
+        background-color: var(--white-color);
+        color: var(--primery-text-color);
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 0.03em;
+    }
+
+    .container {
+        width: 1200px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: tomato; */
+        /* outline: 1px solid teal; */
+
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+    
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    /* стили для ОБЩЕГО хедера */
+    
+    .page-header {
+        border-bottom: 1px solid #ECECEC;
+
+        background: var(--white-color);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
+
+
+    /* стили для Лого */
+
+    .logo-web {   
+        color: var(--accient-color); 
+    }
+
+    .header-logo,
+    .footer-logo,
+    .logo-web {
+        display: inline-block;
+    
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+    }
+    .header-logo {
+        margin-top:24px;
+        margin-bottom: 25px;
+        color: var(--black-color);
+
+    }
+    .footer-logo {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        color: var(--white-color);
+    }
+
+    /* Навигация */
+
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+    .site-nav {
+        display: flex;
+        align-items: center;
+
+        
+    }
+    .site-nav-links {
+        display: flex;
+        padding-left: 0;
+        margin-left: 93px;
+    }
+
+    .nav-links-item:not(:last-child),              /* всегда удаляем крайнюю геометрию */
+    .contact-links-item:not(:last-child) 
+        {
+        margin-right: 50px;
+    }
+    
+    .nav-link {
+        position: relative;
+        display: block;
+        padding-top: 32px;              /*увеличиваем область ховера для ссылки */
+        padding-bottom: 32px;
+        color: var(--secondary-text-color);
+    }
+    
+    .current::after {
+        position:absolute;
+        bottom: -1px;                   /* так по макету*/
+        left: 0;
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: var(--accient-color);
+        border-radius: 2px;
+    }
+
+    .header-contact .contact-link {
+        color: var(--primery-text-color);
+        padding-top: 32px;                      /*увеличиваем область ховера для ссылки */
+        padding-bottom: 32px;     
+    }
+    .header-contact {
+        display: flex;
+        margin-left: auto;
+    }
+    .mail-icon {
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        fill: currentColor;
+    }
+    
+    .phone-icon {
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+        fill: currentColor;
+    }
+
+    /* ИКОНКИ ЧЕРЕЗ ПСЕВДОЭЛЕМЕНТЫ */
+
+    /* .contact-icon {
+        display: flex;
+        align-items: center;
+    } */
+    /* .contact-icon::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        margin-right: 10px;
+        background-color: teal;       
+        
+    } */
+    /* .contact-icon.mail::before {
+        background-image: url(../images/envelope.svg);
+    }
+    .contact-icon.phone::before {
+        background-image: url(../images/smartphone.svg);
+    } */
+
+
+    /* стили для героя */
+
+    .hero {
+        max-width: 1600px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+
+        background: var(--background-header-footer);    
+    }
+    .overlay {
+        background-image: linear-gradient(
+                                        rgba(47, 48, 58, 0.4),
+                                        rgba(47, 48, 58, 0.4)
+                                        ),
+                                        url(../images/img.jpg);
+        background-position: center;                        /* при сужении вьюпорта картинка остаюется по центру*/
+    }
+
+    .hero-title {
+        padding-top: 200px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 696px;
+        color: var(--white-color);
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+        /* backdrop это серый фон за модалкой */
+    .backdrop {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    /* правило is-hidden активно пока не нажмем кнопку в результате чего он перестанет быть активным и модалка будет опасити 1 */
+    .backdrop.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+        /* модальное окно кодом ниже показано */
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    
+        min-width: 528px;
+        min-height: 581px;
+        padding: 15px;
+    
+        background-color: var(--white-color);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                    0px 1px 1px rgba(0, 0, 0, 0.14),
+                    0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        transform: scale(1) translate(-50%, -50%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* модалка когда она спрятана: когда спрятан бэкдроп применяем к модалке то что с скобках */
+    .backdrop.is-hidden .modal {
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+        /* translate(-50%, -50%) это позиция модалки */
+         /* а transform: это изменение */
+
+/* крестик закрыть в модалке */
+    .close-cross {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        margin: 15px;
+        cursor: pointer;
+    }
+    
+        /* .close-button {
+                    position: absolute;
+                    top: 0;                             ВАРИАНТ КРЕСТИКА ЧЕРЕЗ ТЕКСТ "+"
+                    right: 0;
+                    transform: rotate(45deg);
+                    border: transparent;
+                    border-radius: 50%;
+                    font-size: 25px;
+                    margin: 10px; 
+                } */
+
+    /* стили для секций */
+    .section {
+        padding-top: 94px;
+    }
+
+    .section-title {
+        margin-bottom: 50px;
+        text-align: center;
+
+        color: var(--secondary-text-color);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+    }
+
+    .features {
+        display: flex;
+    }
+
+    .features-item:not(:last-child) {
+        margin-right: 30px;
+    }
+    .features-item::before {
+        display: block;
+        content: "";
+        width: 270px;
+        height: 120px;
+
+    }
+    .pseudo1::before {
+        background-image: url(../images/SVG/antenna.svg);
+    }
+    .pseudo2::before {
+        background-image: url(../images/SVG/clock\ 1.svg);
+    }
+    .pseudo3::before {
+        background-image: url(../images/SVG/diagram.svg);
+    }
+    .pseudo4::before {
+        background-image: url(../images/SVG/astronaut.svg);
+    }
+
+
+    .item-title {
+        margin-bottom: 10px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--secondary-text-color);
+    }
+
+    /* на данный момент все теги <p> имеют класс text. Хотя можно было обратитьсяи просто к тегу или через родителя к тегу  */
+    .text {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
+    .example-text {
+        padding-bottom: 20px;
+    }
+
+    .works {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cut-superfluous {              /*подрезаем картинки под псевдоэлемент потому что он не совпадает*/
+        display: block;
+        height: 100%
+    }
+
+    /* .works-item + .works-item {            рабочий олдскульный вариант марджинов кроме крайних
+        margin-left: 30px;
+    } */
+
+    .works-item {
+        position: relative;
+    }
+
+    .work-definition {
+        position: absolute;
+        display: block;
+        height: 70px;
+        width: 370px;
+        bottom: 0;                          
+        left: 0;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 27px;
+        color: var(--white-color);
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+
+    /* Наша команда */
+    .team {
+        margin-bottom: 0;
+        background: var(--team-color);
+    }
+    .team-list {
+        display: flex;
+        padding-bottom: 94px;
+    }
+    .team-list-item + .team-list-item {
+        margin-left: 30px;
+    } 
+    .team-list-item {
+        background-color: var(--white-color);
+        text-align: center;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+    .employee-name {
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        
+        color: var(--secondary-text-color);
+    }
+    .team-list .text {
+        padding-bottom: 16px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content:center;
+    }
+    .social-media > li {
+        padding-bottom: 30px;
+    }
+    .social-media > li:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .social-link {
+        display: block;
+
+        width: 44px;
+        height: 44px;
+
+        color: rgba(175, 177, 184, 1);
+        border-radius: 50%;
+    }
+
+    .social-link:hover,
+    .social-link:focus {
+        background-color: var(--accient-color);
+        color: var(--white-color);
+        
+    }
+    .instagram-link {
+        fill: currentColor; 
+        margin: 12px;
+    }
+    .twitter-link {
+        fill: currentColor; 
+        margin: 12px;
+    }
+    .facebook-link {
+        fill: currentColor; 
+        margin: 12px;
+    }
+    .linkedin-link {
+        fill: currentColor; 
+        margin: 12px;
+    }
+
+    /* .social-link::after {
+        content: "";
+        display: block;
+        width: 44px;
+        height: 44px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    .instagram-link::after { 
+        background-image: url(../images/instagram.svg);
+    }
+
+    .twitter-link::after {   
+        background-image: url(../images/twitter.svg);
+    }
+
+    .facebook-link::after {
+        background-image: url(../images/facebook.svg);
+    }
+
+    .linkedin-link::after {
+        background-image: url(../images/linkedin.svg);
+    } */
+
+    .clients-list {
+        display: flex;
+        padding-bottom: 94px;
+    }
+    .client-item:not(:last-child) {
+        margin-right: 30px;
+    }
+    .client-item {
+        width: 170px;
+        height: 92px;
+        padding: 16px 32px;
+
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        color: rgba(175, 177, 184, 1);
+    }
+    .clients-logo {
+        fill: currentColor;
+    }
+    
+
+    .client-item:hover {
+        color: rgba(33, 150, 243, 1);
+        border-color: rgba(33, 150, 243, 1);
+    }
+    
+
+    /* футер */
+    .page-footer {
+        width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        background: var(--background-header-footer);
+    }
+    
+    .contact-address .map-link {
+        color: var(--white-color);
+    }
+    .contact-address {
+        padding-bottom: 60px;
+
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        
+    }
+
+    .contact-address .contact-link {
+        color: rgba(255, 255, 255, 0.6);
+        
+    }
+    .contact-address .contact-items:not(:last-child)  {
+        padding-bottom: 9px;
+    }
+
+
+    .footer-items {
+        display: flex;
+        
+    }
+    .join-us {
+        padding-top: 72px;
+        margin-left: 70px;
+    }
+    .join-title {
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--white-color);
+    }
+
+    .join-us-links {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--white-color);
+
+    }
+
+
+    .nav-link.current,      /*актуальная страница */
+    .nav-link:hover,        /* ссылки в навигации хедера */
+    .nav-link:focus,   
+    .contact-link:hover,       /* ссылки в футере */
+    .contact-link:focus
+        {   
+        color: var(--accient-color);
+    }
+    
+
+
+    .btn {
+        display: inline-block;
+        border: 1px solid transparent;
+        border-radius: 4px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        
+    }
+
+    .btn.primary { 
+        min-width: 200px; 
+        padding: 10px 32px;
+        
+        color: var(--white-color);
+        background-color: var(--accient-color);
+
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        
+    }
+    /* .btn.primary:hover,
+    .btn.primary:focus {
+
+    } */
+    .btn.secondary {
+        padding: 6px 22px;
+        
+        color: var(--black-color);
+        background-color: var(--white-color);
+
+        font-weight: 500;
+        line-height: 1.63;
+        letter-spacing: 0.03em;
+        
+    }
+
+    .btn.secondary:hover,
+    .btn.secondary:focus {
+        color: var(--white-color);
+        background-color: var(--accient-color);
+    }
+    .btn.secondary.current-btn {
+        color: var(--white-color);
+        background-color: var(--accient-color);
+    }
+
+
+      /* ПОРТФОЛИО */
+
+    .filter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 34px;
+    }
+    .filter-item + .filter-item {
+        margin-left: 8px;
+    }
+
+    /* секция примеров работ */
+
+    .examples {
+        padding-bottom: 95px;
+    }
+
+    .examples-item {
+        display: flex;
+        flex-wrap: wrap;
+        
+        padding-left: 0;
+    }
+
+    .example-item:hover .examples-overlay{
+        transform: translateY(0);
+    }
+    .example-thumb {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .examples-overlay {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 63px 24px;
+        line-height: 1.55;
+        font-size: 18px;
+        color: var(--white-color);
+        background-color: rgb(33, 150, 243, .9);
+    }
+
+    .example-text-group {
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        border-left: 1px solid var(--border-color);
+    }
+    .example-text-group > h2 {
+        padding-left: 24px;
+    }
+    .example-text-group > p {
+        padding-left: 24px;
+    }
+    .example-list {
+        width: calc((100% - 60px) / 3);             /* альтернатива width flex-basis: calc((100% - 60px) / 3);*/
+    
+        margin-bottom: 30px;
+        margin-right: 30px;
+
+    }
+
+    .example-list:nth-child(3n) {
+        margin-right: 0;
+    }
+    .example-list:nth-last-child(-n+3) {
+        margin-bottom: 0;
+    }
+
+    .example-list:nth-child(6) h2 {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .example-list:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+    } 
+
+    /* АЛЬТЕРНАТИВА */
+    /* .example-list:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+    .example-list:not(:nth-last-child(-n+3)) {
+        margin-bottom: 30px;
+    } */
+
+    .example-text-group > h2 {
+        color: var(--secondary-text-color);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        /* display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding-bottom: 4px; */
+    }
+    .example-text-group > .text {
+        color: var(--primery-text-color);  
+        font-size: 16px;
+        line-height: 1.88;
+    }
+    
