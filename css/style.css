@@ -235,7 +235,7 @@
     } */
 
 
-    /* стили для героя */
+    /*--------------------------------- стили для героя ----------------------------------*/
 
     .hero {
         max-width: 1600px;
@@ -269,6 +269,9 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
     }
+
+    /*----------------------------------------------модальное окно --------------------------------------------*/
+
         /* backdrop это серый фон за модалкой */
     .backdrop {
         position: fixed;
@@ -293,7 +296,7 @@
     
         min-width: 528px;
         min-height: 581px;
-        padding: 15px;
+        
     
         background-color: var(--white-color);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -312,14 +315,20 @@
          /* а transform: это изменение */
 
 /* крестик закрыть в модалке */
-    .close-cross {
+    .close-cross.button {
+        display: flex;
+        align-items: center;
         position: absolute;
         top: 0;
         right: 0;
-        width: 16px;
-        height: 16px;
-        margin: 15px;
-        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                    0px 1px 1px rgba(0, 0, 0, 0.14), 
+                    0px 2px 1px rgba(0, 0, 0, 0.2);
     }
     
         /* .close-button {
@@ -333,7 +342,44 @@
                     margin: 10px; 
                 } */
 
-    /* стили для секций */
+    .order-title {
+        padding-bottom: 12px;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        
+        color: #212121;
+    }
+    .order-form {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+    .order-form input {
+        height: 40px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+    }
+    .order-form label {
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        margin-bottom: 4px;
+    }
+    .order-form textarea {
+        resize: none;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+    }
+    .order-form .btn {
+        margin:auto;
+    }
+    .agreement {
+        text-decoration: underline;
+        color: var(--accient-color);
+    }
+    /* -----------------------------------стили для секций ---------------------------------------------*/
     .section {
         padding-top: 94px;
     }
@@ -347,7 +393,7 @@
         font-size: 36px;
         line-height: 1.16;
     }
-
+/* ----------------------------------------наши приимущества --------------------------------------------*/
     .features {
         display: flex;
     }
@@ -360,7 +406,7 @@
         content: "";
         width: 270px;
         height: 120px;
-
+/* ------------------------------------SVG в секции приимуществ ------------------------------------------*/
     }
     .pseudo1::before {
         background-image: url(../images/SVG/antenna.svg);
@@ -386,15 +432,11 @@
         color: var(--secondary-text-color);
     }
 
-    /* на данный момент все теги <p> имеют класс text. Хотя можно было обратитьсяи просто к тегу или через родителя к тегу  */
     .text {
         font-size: 14px;
         line-height: 1.71;
     }
 
-    .example-text {
-        padding-bottom: 20px;
-    }
 
     .works {
         display: flex;
@@ -429,7 +471,7 @@
         background-color: rgba(47, 48, 58, 0.8);
     }
 
-    /* Наша команда */
+    /* ---------------------------------------------Наша команда-------------------------------------------------- */
     .team {
         margin-bottom: 0;
         background: var(--team-color);
@@ -670,7 +712,7 @@
     }
 
 
-      /* ПОРТФОЛИО */
+      /* -----------------------------------------------ПОРТФОЛИО ---------------------------------------------------*/
 
     .filter {
         display: flex;
@@ -681,7 +723,7 @@
         margin-left: 8px;
     }
 
-    /* секция примеров работ */
+    /* -------------------------------секция примеров работ ---------------------------------------*/
 
     .examples {
         padding-bottom: 95px;
@@ -690,8 +732,11 @@
     .examples-item {
         display: flex;
         flex-wrap: wrap;
-        
         padding-left: 0;
+    }
+
+    .example-text {
+        padding-bottom: 20px;
     }
 
     .example-item:hover .examples-overlay{
@@ -734,8 +779,8 @@
     
         margin-bottom: 30px;
         margin-right: 30px;
-
     }
+
 
     .example-list:nth-child(3n) {
         margin-right: 0;

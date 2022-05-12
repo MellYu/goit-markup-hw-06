@@ -15,7 +15,7 @@
     <!-- шапка -->
     <header class="page-header">
         <!-- навигация - ссылки по сайту -->
-         <div class="container header-container">
+        <div class="container header-container">
             <nav class="site-nav">
                 <a class="header-logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
                 <ul class="site-nav-links" >
@@ -49,7 +49,7 @@
                     </a>
                 </li>
             </ul>
-         </div>
+        </div>
     </header>
 
     <!-- основной контент -->
@@ -346,12 +346,30 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button data-modal-close type="button" >
-                <!--class="close-button" + -->
-                <svg class="close-cross" width="18px" height="18px">
+            <button data-modal-close type="button" class="close-cross button">
+                <svg width="18px" height="18px">
                     <use href="./images/sprite1.svg#icon-Close-krest"></use>
                 </svg>
-            </button>  
+            </button> 
+            <form class="order-form">
+                <b class="order-title" >Оставьте свои данные, мы вам перезвоним</b>
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" autofocus>
+
+                <label for="tel">Телефон</label>
+                <input type="tel" name="tel" id="tel">
+
+                <label for="email">Почта</label>
+                <input type="email" name="email" id="email">
+
+                <label for="comment">Комментарий</label>
+                <textarea name="comment" id="comment"></textarea>
+
+                <input type="checkbox" name="agreement" value="agreement" id="agreement">
+                <label for="agreement">Соглашаюсь с рассылкой и принимаю <a class="agreement" href="">Условия договора</a></label>
+                
+                <button class="btn primary" type="submit">Отправить</button>
+            </form> 
         </div>
     </div>
     <script src="./js/modal.js"></script>
