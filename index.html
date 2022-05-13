@@ -364,20 +364,39 @@
             </button> 
             <form class="order-form">
                 <b class="order-title" >Оставьте свои данные, мы вам перезвоним</b>
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" autofocus>
+                <label class="form-item">
+                    Имя
+                    <input class="form-field" type="text" name="name">
+                    <svg class="form-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-person-form"></use>
+                    </svg>
+                </label>  
+                <label class="form-item">
+                    Телефон
+                    <input class="form-field" type="tel" name="tel">
+                    <svg class="form-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-phone-bform"></use>
+                    </svg>
+                </label>
+                
+                <label class="form-item">
+                    Почта
+                    <input class="form-field" type="email" name="email">
+                    <svg class="form-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-email-form"></use>
+                    </svg>
+                </label>
+                
+                <label class="form-item">
+                    Комментарий
+                    <textarea type="text" class="form-comment-area" name="comment" placeholder="Введите текст"></textarea>
+                </label>
 
-                <label for="tel">Телефон</label>
-                <input type="tel" name="tel" id="tel">
-
-                <label for="email">Почта</label>
-                <input type="email" name="email" id="email">
-
-                <label for="comment">Комментарий</label>
-                <textarea name="comment" id="comment"></textarea>
-
-                <input type="checkbox" name="agreement" value="agreement" id="agreement">
-                <label for="agreement">Соглашаюсь с рассылкой и принимаю <a class="agreement" href="">Условия договора</a></label>
+                <label class="checkbox">
+                    <input class="" type="checkbox" name="agreement" value="agreement">
+                    <span class="icon-checkbox" ></span>
+                    Соглашаюсь с рассылкой и принимаю <a class="agreement" href="">Условия договора</a>
+                </label>
                 
                 <button class="btn primary" type="submit">Отправить</button>
             </form> 
