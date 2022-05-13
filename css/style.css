@@ -548,7 +548,7 @@
     .subscription {
         padding-top: 72px;
     }
-    
+
     .email-field {
         padding-left: 16px;
         width: 358px;
@@ -846,10 +846,11 @@
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
     }
-    /* .form-item:focus-withis > .form-icon {
-       background-size: contain;
 
-    } */
+    .form-field:focus ~ .form-icon {
+        fill:var(--accient-color);
+    }
+    
 
     .form-comment-area {
         width: 100%;
@@ -881,7 +882,7 @@
         left: 12px;
         transform: translateY(50%);
     }
-    
+
     .icon-checkbox {
         display: inline-block;
         width: 16px;
@@ -892,7 +893,11 @@
     .checkbox:checked + .icon-checkbox {
         border-color: var(--accient-color);
         background-color: var(--accient-color);
-        /* background-image: url(../images/SVG/form/icon\ check.svg);
+        background-image: url(../images/SVG/form/icon\ check.svg);
         background-size: contain;
-        background-origin: border-box; */
-    }
+        background-origin: border-box;
+    } 
+        .form-item:focus-within > .form-field {                /* ПРИМЕНЯЕТСЯ НО ЦВЕТ НЕ МЕНЯЕТ*/
+            border: 1px solid rgba(247, 1, 1, 0);
+            /* background-color:red; */
+        }
