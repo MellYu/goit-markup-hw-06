@@ -902,10 +902,11 @@
         background-size: contain;
         background-origin: border-box;
     } 
-        .form-item:focus-within > .form-field {  
-            /* border-color: var(--accient-color);    */
-
-            border: 1px solid rgba(247, 1, 1, 0);       /* ПРИМЕНЯЕТСЯ НО ЦВЕТ НЕ МЕНЯЕТ*/
-            
-            /* background-color:red; */
-        }
+    .form-item:focus-within > .form-field {  
+        border-color: var(--accient-color);
+        outline: none;  
+    }
+    .form-item:focus-within>textarea[type="text"] {
+        border-color: var(--accient-color);
+            outline: none;
+    }
