@@ -564,6 +564,10 @@
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
             border-radius: 4px;
             background-color: var(--background-header-footer);
+            color: var(--white-color);
+    }
+    .email-field:focus {
+        outline: none;
     }
 
     input[type="email"]::placeholder {
